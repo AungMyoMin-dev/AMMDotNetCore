@@ -5,7 +5,7 @@ using System.Data.SqlTypes;
 
 Console.WriteLine("Hello, World!");
 
-/* SqlConnectionStringBuilder stringBuilder = new SqlConnectionStringBuilder();
+SqlConnectionStringBuilder stringBuilder = new SqlConnectionStringBuilder();
 stringBuilder.DataSource = "DESKTOP-GRVHDSJ\\MYMSQLSQL";
 stringBuilder.InitialCatalog = "AMMDotNetCore";
 stringBuilder.UserID = "sa";
@@ -31,15 +31,18 @@ foreach (DataRow dr in dt.Rows)
     Console.WriteLine("Blog Author =>" + dr["BlogAuthor"]);
     Console.WriteLine("Blog Content =>" + dr["BlogContent"]);
     Console.WriteLine("-------------------------------");
-} */
+} 
 
-AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
+//AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
 //adoDotNetExample.Read();
 //adoDotNetExample.Create("title", "author", "content");
 //adoDotNetExample.Update(11, "test title", "test author", "test content");
 //adoDotNetExample.Delete(11);
-adoDotNetExample.Edit(11);
-adoDotNetExample.Edit(1);
+//adoDotNetExample.Edit(11);
+//adoDotNetExample.Edit(1);
+
+DapperExample dapperExaple = new DapperExample();
+dapperExaple.Run();
 
 Console.ReadKey();
 
